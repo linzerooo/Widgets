@@ -53,7 +53,6 @@
   outline: none;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
-
 }
 
 .toggle-button-hype::after {
@@ -61,7 +60,7 @@
   display: inline-block;
   position: absolute;
   left: 10px;
-  top: 3px;
+  top: 6px;
   width: 80px;
   height: 80px;
   background-color: rgb(0, 0, 0);
@@ -69,6 +68,7 @@
   transform: translateX(0);
   transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
   box-shadow: 1px 1px 10px 5px #44444486;
+  transform: rotate(90deg);
 }
 
 .toggle-button-hype:checked::after {
@@ -110,4 +110,8 @@
   -webkit-border-radius: 50px 50px 0 0;
   -moz-border-radius: 50px 50px 0 0;
   border-radius: 0 50px 50px 0;
+}
+
+.toggle-button-hype-rotate:checked {
+  transform: rotate(180deg);
 }
