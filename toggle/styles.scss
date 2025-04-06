@@ -3,15 +3,17 @@
   -webkit-appearance: none;
   position: relative;
   display: inline-block;
-  width: 100px;
-  height: 50px;
+  width: 200px;
+  height: 100px;
   margin: 0;
   vertical-align: top;
   background: #ffffff;
-  border: 1px solid #ff00dd;
-  border-radius: 30px;
+  border: 2px solid rgb(255, 211, 253);
+  border-radius: 40px;
   outline: none;
   cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+  box-shadow: 1px 1px 10px 1px #44444486;
 }
 
 .toggle-button::after {
@@ -19,19 +21,93 @@
   display: inline-block;
   position: absolute;
   left: 3px;
-  top: 1.5px;
-  width: 45px;
-  height: 45px;
-  background-color: blue;
+  top: 3px;
+  width: 90px;
+  height: 90px;
+  background-color: rgb(255, 211, 253);
   border-radius: 50%;
   transform: translateX(0);
+  transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+  box-shadow: 1px 1px 1px 1px #4444443b;
 }
 
 .toggle-button:checked::after {
-  transform: translateX(calc(100%+3px));
+  transform: translateX(calc(100% + 1px));
   background-color: #fff;
 }
 
 .toggle-button:checked {
-  background-color: blue;
+  background-color: rgb(255, 211, 253);
+}
+
+/*---------------------------------------*/
+
+.toggle-button-hype {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  vertical-align: top;
+  background: #ffffff;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+
+}
+
+.toggle-button-hype::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 10px;
+  top: 3px;
+  width: 80px;
+  height: 80px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  transform: translateX(0);
+  transition: all 0.3s cubic-bezier(0.2, 0.85, 0.32, 1.2);
+  box-shadow: 1px 1px 10px 5px #44444486;
+}
+
+.toggle-button-hype:checked::after {
+  transform: translateY(calc(100% + 3px));
+  background-color: #fff;
+}
+
+.toggle-button-hype:checked {
+  background-color: rgb(196, 4, 4);
+}
+
+.heart {
+  margin-left: 40px;
+  position: relative;
+  width: 100px;
+  height: 175px;
+  background-color: rgb(196, 4, 4);
+  box-shadow: -1px 0px 2px #444;
+  -webkit-border-radius: 50px 50px 0 0;
+  -moz-border-radius: 50px 50px 0 0;
+  border-radius: 50px 50px 0 0;
+  /* Определяем угол наклона */
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  -o-transform: rotate(315deg);
+  transform: rotate(315deg);
+}
+/* Формируем правую часть */
+.heart:before {
+  position: absolute;
+  width: 175px;
+  height: 100px;
+  left: 0;
+  bottom: 0;
+  content: "";
+  background-color: rgb(196, 4, 4);
+  box-shadow: 0px 3px 3px #444444;
+  -webkit-border-radius: 50px 50px 0 0;
+  -moz-border-radius: 50px 50px 0 0;
+  border-radius: 0 50px 50px 0;
 }
